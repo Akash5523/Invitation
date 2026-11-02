@@ -1,1693 +1,1785 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
-    <title>Ankit Singh Weds Dhriti Patel · Wedding Invitation</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,700&family=Great+Vibes&family=Tiro+Devanagari+Hindi&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --deep: #2a0710;
-        --maroon: #5a0f22;
-        --gold: #e3b866;
-        --gold2: #f8e0a0;
-        --cream: #fff3d9;
-        --saffron: #f08a24;
-        --hi: "Cormorant Garamond", Georgia, serif;
-        --nm: "Cinzel Decorative", "Cinzel", Georgia, serif;
-        --sr: "Cormorant Garamond", Georgia, serif;
-        --cz: "Cinzel", Georgia, serif;
-        color-scheme: dark;
-        box-sizing: border-box;
-        padding-top: env(safe-area-inset-top, 0px);
-        padding-bottom: env(safe-area-inset-bottom, 0px);
-      }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      html {
-        scroll-padding-top: env(safe-area-inset-top, 0px);
-        height: 100%;
-      }
-      body {
-        background: var(--deep);
-        color: var(--cream);
-        font-family: var(--hi);
-        line-height: 1.7;
-        overflow-x: hidden;
-      }
-      body:not(.opened) {
-        overflow: hidden;
-        height: 100%;
-      }
-      .bg {
-        position: fixed;
-        inset: 0;
-        z-index: 0;
-        background-size: cover;
-        background-position: center 45%;
-        opacity: 0;
-        transform: scale(1.08);
-        will-change: opacity, transform;
-        transition:
-          opacity 2.2s ease,
-          transform 16s ease-out;
-      }
-      .bg.on {
-        opacity: 1;
-        transform: scale(1);
-      }
-      .b1,
-      .glow {
-        background-image: url("images/img1.jpg");
-      }
-      .b2 {
-        background-image: url("images/img2.jpg");
-      }
-      .b3 {
-        background-image: url("images/img3.jpg");
-      }
-      #shade {
-        position: fixed;
-        inset: 0;
-        z-index: 1;
-        background: radial-gradient(
-          ellipse at 50% 42%,
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Ankit Singh Weds Dhriti Patel · Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,700&family=Great+Vibes&family=Tiro+Devanagari+Hindi&display=swap"
+    rel="stylesheet" />
+  <link rel="preload" as="image" href="images/land1.jpeg" />
+  <link rel="preload" as="image" href="images/land2.jpeg" />
+  <link rel="preload" as="image" href="images/img1.jpg" />
+  <link rel="preload" as="image" href="images/img2.jpg" />
+  <link rel="preload" as="image" href="images/img3.jpg" />
+  <style>
+    :root {
+      --deep: #2a0710;
+      --maroon: #5a0f22;
+      --gold: #e3b866;
+      --gold2: #f8e0a0;
+      --cream: #fff3d9;
+      --saffron: #f08a24;
+      --hi: "Cormorant Garamond", Georgia, serif;
+      --nm: "Cinzel Decorative", "Cinzel", Georgia, serif;
+      --sr: "Cormorant Garamond", Georgia, serif;
+      --cz: "Cinzel", Georgia, serif;
+      color-scheme: dark;
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-padding-top: env(safe-area-inset-top, 0px);
+      height: 100%;
+    }
+
+    body {
+      background: var(--deep);
+      color: var(--cream);
+      font-family: var(--hi);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body:not(.opened) {
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background-size: cover;
+      background-position: center 45%;
+      opacity: 0;
+      transform: scale(1.08);
+      will-change: opacity, transform;
+      transition:
+        opacity 2.2s ease,
+        transform 16s ease-out;
+    }
+
+    .bg.on {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .b1,
+    .glow {
+      background-image: url("images/img1.jpg");
+    }
+
+    .b2 {
+      background-image: url("images/img2.jpg");
+    }
+
+    .b3 {
+      background-image: url("images/img3.jpg");
+    }
+
+    #shade {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      background: radial-gradient(ellipse at 50% 42%,
           #2a0710b3,
-          #2a0710f0 92%
-        );
-        opacity: 0.8;
-        pointer-events: none;
-      }
+          #2a0710f0 92%);
+      opacity: 0.8;
+      pointer-events: none;
+    }
 
-      /* ---- Gate (landing) ---- */
-      #gate {
-        position: fixed;
-        inset: 0;
-        z-index: 50;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2.2vh;
-        text-align: center;
-        padding: env(safe-area-inset-top, 0px) 16px
-          env(safe-area-inset-bottom, 0px);
-        transform-origin: 50% 42%;
-        background: radial-gradient(
-          circle at 50% 40%,
+    /* ---- Gate (landing) ---- */
+    #gate {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.2vh;
+      text-align: center;
+      padding: env(safe-area-inset-top, 0px) 16px env(safe-area-inset-bottom, 0px);
+      transform-origin: 50% 42%;
+      background: radial-gradient(circle at 50% 40%,
           #7a1a2c,
-          var(--deep) 72%
-        );
-        transition:
-          transform 2.4s cubic-bezier(0.7, 0, 0.2, 1),
-          opacity 1.8s ease 0.4s;
-      }
-      #gate::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        opacity: 0.16;
-        background: radial-gradient(circle, var(--gold) 1.5px, transparent 2px)
-          0 0/28px 28px;
-      }
-      #gate.go {
-        transform: scale(2.6);
-        opacity: 0;
-        pointer-events: none;
-      }
-      #gate > * {
-        position: relative;
-      }
-      .t1 {
-        color: var(--gold2);
-        letter-spacing: 0.06em;
-      }
-      .t2 {
-        font-weight: 400;
-        font-size: clamp(1.5rem, 6vw, 2.1rem);
-        color: var(--gold);
-      }
-      .frame {
-        width: min(80vw, 380px);
-        height: min(52vh, 540px);
-        border-radius: 999px 999px 0 0;
-        border: 6px solid var(--gold);
-        overflow: hidden;
-        perspective: 1400px;
-        box-shadow:
-          0 0 0 4px var(--maroon),
-          0 0 70px #e3b86659;
-        background: #000;
-        position: relative;
-      }
-      .glow {
-        position: absolute;
-        inset: 0;
-        opacity: 0;
-        transition: opacity 2.2s ease 0.3s;
-        background-size: cover;
-        background-position: 50% 60%;
-        box-shadow: inset 0 0 60px #2a0710;
-      }
-      .door {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 50%;
-        backface-visibility: hidden;
-        transition: transform 2.7s cubic-bezier(0.6, 0, 0.2, 1);
-        background:
-          radial-gradient(circle, var(--gold) 0 2px, transparent 3px) 0 0/22px
-            22px,
-          linear-gradient(90deg, #6b1226, #8f1d36 50%, #6b1226);
-        box-shadow:
-          inset 0 0 0 5px #3d0a16,
-          inset 0 0 0 7px var(--gold);
-      }
-      .door::after {
-        content: "";
-        position: absolute;
-        inset: 16% 13% 8%;
-        border: 2px solid var(--gold);
-        border-radius: 999px 999px 0 0;
-        background: linear-gradient(#5a0f22, #35091a);
-        box-shadow:
-          inset 0 0 0 7px #5a0f22,
-          inset 0 0 0 8px #e3b86699;
-      }
-      .door i {
-        position: absolute;
-        top: 56%;
-        width: 26px;
-        height: 26px;
-        border: 3px solid var(--gold);
-        border-radius: 50%;
-        z-index: 2;
-        box-shadow: 0 0 8px #000a;
-      }
-      .dl {
-        left: 0;
-        transform-origin: 0 50%;
-      }
-      .dl i {
-        right: 9px;
-      }
-      .dr {
-        right: 0;
-        transform-origin: 100% 50%;
-      }
-      .dr i {
-        left: 9px;
-      }
-      #gate.open .dl {
-        transform: rotateY(-105deg);
-      }
-      #gate.open .dr {
-        transform: rotateY(105deg);
-      }
-      #gate.open .glow {
-        opacity: 1;
-      }
-      .medal {
-        position: absolute;
-        top: 5%;
-        left: 50%;
-        width: 62px;
-        height: 62px;
-        margin-left: -31px;
-        border-radius: 50%;
-        z-index: 3;
-        background: radial-gradient(#fbe7a8, var(--gold));
-        display: grid;
-        place-items: center;
-        border: 3px solid var(--maroon);
-        transition:
-          opacity 1s,
-          transform 1s;
-      }
-      #gate.open .medal {
-        opacity: 0;
-        transform: scale(1.6);
-      }
-      .medal svg {
-        width: 34px;
-        height: 34px;
-      }
-      #btn {
-        font: inherit;
-        font-size: 1.05rem;
-        color: var(--deep);
-        background: linear-gradient(var(--gold2), var(--gold));
-        border: 0;
-        border-radius: 40px;
-        padding: 12px 34px;
-        cursor: pointer;
-        box-shadow: 0 0 0 0 #e3b866aa;
-        animation: ring 2.4s ease-out infinite;
-        transition:
-          transform 0.3s,
-          opacity 0.6s;
-      }
-      #btn:hover {
-        transform: scale(1.05);
-      }
-      #btn:focus-visible {
-        outline: 3px solid var(--cream);
-        outline-offset: 3px;
-      }
-      #gate.open #btn {
-        opacity: 0;
-        pointer-events: none;
-        animation: none;
-      }
-      @keyframes ring {
-        70% {
-          box-shadow: 0 0 0 18px #e3b86600;
-        }
-      }
+          var(--deep) 72%);
+      transition:
+        transform 2.4s cubic-bezier(0.7, 0, 0.2, 1),
+        opacity 1.8s ease 0.4s;
+    }
 
-      /* ---- Layout ---- */
-      main {
-        position: relative;
-        z-index: 2;
-      }
-      .sec {
-        max-width: 880px;
-        margin: 0 auto;
-        padding: 80px 20px;
-        text-align: center;
-      }
-      #hero {
-        min-height: 100svh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 60px 16px;
-        text-shadow: 0 2px 18px #2a0710;
-      }
-      .sh {
-        color: var(--gold2);
-        font-size: clamp(0.9rem, 3.2vw, 1.1rem);
-      }
-      .names {
-        font-family: var(--sr);
-        font-style: italic;
-        font-weight: 700;
-        font-size: clamp(2.9rem, 13vw, 6.6rem);
-        line-height: 1.04;
-        color: var(--gold2);
-        margin: 18px 0 6px;
-        text-shadow:
-          0 2px 24px #2a0710,
-          0 0 12px #2a0710;
-      }
-      .names > span {
-        display: block;
-      }
-      .names .wd {
-        font-family: var(--cz);
-        font-style: normal;
-        font-weight: 500;
-        font-size: 0.26em;
-        letter-spacing: 0.5em;
-        color: var(--cream);
-        margin: 0.6em 0 0.5em;
-      }
-      .w {
-        display: inline-block;
-        white-space: nowrap;
-      }
-      .ch {
-        display: inline-block;
-        opacity: 0;
-        transform: translateY(0.45em) scale(0.9);
-        filter: blur(10px);
-        transition:
-          opacity 1.5s ease,
-          transform 1.5s ease,
-          filter 1.5s ease;
-      }
-      .show .ch {
-        opacity: 1;
-        transform: none;
-        filter: none;
-      }
-      .dv {
-        display: block;
-        font-family: var(--hi);
-        font-style: normal;
-        font-weight: 400;
-        font-size: 0.3em;
-        color: var(--cream);
-        letter-spacing: 0.08em;
-      }
-      .fade {
-        opacity: 0;
-        transform: translateY(16px);
-        transition:
-          opacity 1.6s ease,
-          transform 1.6s ease;
-        transition-delay: calc(var(--end, 3s) + var(--d, 0s));
-      }
-      .show .fade {
-        opacity: 1;
-        transform: none;
-      }
-      .date {
-        font-family: var(--cz);
-        font-size: clamp(1.1rem, 4.5vw, 1.6rem);
-        color: var(--gold);
-        letter-spacing: 0.18em;
-      }
-      .hint {
-        margin-top: 34px;
-        font-size: 0.85rem;
-        color: var(--gold2);
-      }
-      .hint b {
-        display: block;
-        width: 1px;
-        height: 42px;
-        margin: 8px auto 0;
-        background: linear-gradient(var(--gold), transparent);
-        animation: dr 2s ease-in-out infinite;
-      }
-      @keyframes dr {
-        50% {
-          transform: translateY(8px);
-          opacity: 0.4;
-        }
-      }
-      h2 {
-        font-weight: 400;
-        font-size: clamp(1.7rem, 6vw, 2.5rem);
-        color: var(--gold);
-      }
-      .orn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 14px;
-        margin: 18px auto;
-        color: var(--gold);
-      }
-      .orn span {
-        height: 1px;
-        width: 0;
-        background: linear-gradient(90deg, transparent, var(--gold));
-        transition: width 1.8s ease 0.3s;
-      }
-      .orn span:last-child {
-        transform: scaleX(-1);
-      }
-      .orn.in span,
-      .show .orn span {
-        width: min(28vw, 130px);
-      }
-      .bw {
-        width: 34px;
-        height: 34px;
-      }
-      .panel {
-        background: #2a0710b8;
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        border: 1px solid #e3b86673;
-        border-radius: 24px;
-        padding: 30px 24px;
-        box-shadow: 0 10px 50px #0008;
-      }
-      .panel p {
-        font-size: clamp(1rem, 3.8vw, 1.15rem);
-        max-width: 34em;
-        margin: 0 auto;
-      }
-      .rv {
-        opacity: 0;
-        transform: translateY(36px);
-        transition:
-          opacity 1.3s ease,
-          transform 1.3s ease;
-      }
-      .rv.in {
-        opacity: 1;
-        transform: none;
-      }
+    #gate::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.16;
+      background: radial-gradient(circle, var(--gold) 1.5px, transparent 2px) 0 0/28px 28px;
+    }
 
-      /* timeline */
-      .tl {
-        position: relative;
-        margin-top: 34px;
-        text-align: left;
-        padding-left: 34px;
-      }
-      .tl::before {
-        content: "";
-        position: absolute;
-        left: 9px;
-        top: 6px;
-        bottom: 6px;
-        width: 2px;
-        background: linear-gradient(var(--gold), #e3b86622);
-      }
-      .ev {
-        position: relative;
-        margin-bottom: 22px;
-        display: flex;
-        gap: 18px;
-        align-items: center;
-        padding: 18px 20px;
-        border-radius: 20px;
-        background: #2a0710b8;
-        border: 1px solid #e3b86655;
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-      }
-      .ev::before {
-        content: "";
-        position: absolute;
-        left: -33px;
-        top: 50%;
-        width: 14px;
-        height: 14px;
-        margin-top: -7px;
-        border-radius: 50%;
-        background: var(--saffron);
-        box-shadow:
-          0 0 0 4px var(--deep),
-          0 0 14px var(--saffron);
-      }
-      .dt {
-        min-width: 84px;
-        text-align: center;
-        color: var(--gold);
-      }
-      .dt b {
-        display: block;
-        font-family: var(--sr);
-        font-style: italic;
-        font-size: 2.7rem;
-        line-height: 1;
-      }
-      .dt span {
-        font-size: 0.82rem;
-        color: var(--cream);
-      }
-      .ev h3 {
-        font-weight: 400;
-        font-size: 1.45rem;
-        color: var(--gold2);
-        line-height: 1.3;
-      }
-      .ev em {
-        font-family: var(--sr);
-        font-size: 1.05rem;
-        color: var(--gold);
-      }
-      .ev p {
-        font-size: 0.95rem;
-        margin-top: 4px;
-      }
-      .wk {
-        color: var(--saffron);
-      }
-      .ev.main {
-        background: linear-gradient(135deg, #7a1a2ce6, #3d0a16e6);
-        border: 2px solid var(--gold);
-        box-shadow: 0 0 40px #e3b86659;
-      }
-      .ev.main h3 {
-        font-size: 1.8rem;
-      }
+    #gate.go {
+      transform: scale(2.6);
+      opacity: 0;
+      pointer-events: none;
+    }
 
-      /* venues + countdown */
+    #gate>* {
+      position: relative;
+    }
+
+    .t1 {
+      color: var(--gold2);
+      letter-spacing: 0.06em;
+    }
+
+    .t2 {
+      font-weight: 400;
+      font-size: clamp(1.5rem, 6vw, 2.1rem);
+      color: var(--gold);
+    }
+
+    .frame {
+      width: min(80vw, 380px);
+      height: min(52vh, 540px);
+      border-radius: 999px 999px 0 0;
+      border: 6px solid var(--gold);
+      overflow: hidden;
+      perspective: 1400px;
+      box-shadow:
+        0 0 0 4px var(--maroon),
+        0 0 70px #e3b86659;
+      background: #000;
+      position: relative;
+    }
+
+    .glow {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 2.2s ease 0.3s;
+      background-size: cover;
+      background-position: 50% 60%;
+      box-shadow: inset 0 0 60px #2a0710;
+    }
+
+    .door {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 50%;
+      backface-visibility: hidden;
+      transition: transform 2.7s cubic-bezier(0.6, 0, 0.2, 1);
+      background:
+        radial-gradient(circle, var(--gold) 0 2px, transparent 3px) 0 0/22px 22px,
+        linear-gradient(90deg, #6b1226, #8f1d36 50%, #6b1226);
+      box-shadow:
+        inset 0 0 0 5px #3d0a16,
+        inset 0 0 0 7px var(--gold);
+    }
+
+    .door::after {
+      content: "";
+      position: absolute;
+      inset: 16% 13% 8%;
+      border: 2px solid var(--gold);
+      border-radius: 999px 999px 0 0;
+      background: linear-gradient(#5a0f22, #35091a);
+      box-shadow:
+        inset 0 0 0 7px #5a0f22,
+        inset 0 0 0 8px #e3b86699;
+    }
+
+    .door i {
+      position: absolute;
+      top: 56%;
+      width: 26px;
+      height: 26px;
+      border: 3px solid var(--gold);
+      border-radius: 50%;
+      z-index: 2;
+      box-shadow: 0 0 8px #000a;
+    }
+
+    .dl {
+      left: 0;
+      transform-origin: 0 50%;
+    }
+
+    .dl i {
+      right: 9px;
+    }
+
+    .dr {
+      right: 0;
+      transform-origin: 100% 50%;
+    }
+
+    .dr i {
+      left: 9px;
+    }
+
+    #gate.open .dl {
+      transform: rotateY(-105deg);
+    }
+
+    #gate.open .dr {
+      transform: rotateY(105deg);
+    }
+
+    #gate.open .glow {
+      opacity: 1;
+    }
+
+    .medal {
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      width: 62px;
+      height: 62px;
+      margin-left: -31px;
+      border-radius: 50%;
+      z-index: 3;
+      background: radial-gradient(#fbe7a8, var(--gold));
+      display: grid;
+      place-items: center;
+      border: 3px solid var(--maroon);
+      transition:
+        opacity 1s,
+        transform 1s;
+    }
+
+    #gate.open .medal {
+      opacity: 0;
+      transform: scale(1.6);
+    }
+
+    .medal svg {
+      width: 34px;
+      height: 34px;
+    }
+
+    #btn {
+      font: inherit;
+      font-size: 1.05rem;
+      color: var(--deep);
+      background: linear-gradient(var(--gold2), var(--gold));
+      border: 0;
+      border-radius: 40px;
+      padding: 12px 34px;
+      cursor: pointer;
+      box-shadow: 0 0 0 0 #e3b866aa;
+      animation: ring 2.4s ease-out infinite;
+      transition:
+        transform 0.3s,
+        opacity 0.6s;
+    }
+
+    #btn:hover {
+      transform: scale(1.05);
+    }
+
+    #btn:focus-visible {
+      outline: 3px solid var(--cream);
+      outline-offset: 3px;
+    }
+
+    #gate.open #btn {
+      opacity: 0;
+      pointer-events: none;
+      animation: none;
+    }
+
+    @keyframes ring {
+      70% {
+        box-shadow: 0 0 0 18px #e3b86600;
+      }
+    }
+
+    /* ---- Layout ---- */
+    main {
+      position: relative;
+      z-index: 2;
+    }
+
+    .sec {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    #hero {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 16px;
+      text-shadow: 0 2px 18px #2a0710;
+    }
+
+    .sh {
+      color: var(--gold2);
+      font-size: clamp(0.9rem, 3.2vw, 1.1rem);
+    }
+
+    .names {
+      font-family: var(--sr);
+      font-style: italic;
+      font-weight: 700;
+      font-size: clamp(2.9rem, 13vw, 6.6rem);
+      line-height: 1.04;
+      color: var(--gold2);
+      margin: 18px 0 6px;
+      text-shadow:
+        0 2px 24px #2a0710,
+        0 0 12px #2a0710;
+    }
+
+    .names>span {
+      display: block;
+    }
+
+    .names .wd {
+      font-family: var(--cz);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 0.26em;
+      letter-spacing: 0.5em;
+      color: var(--cream);
+      margin: 0.6em 0 0.5em;
+    }
+
+    .w {
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .ch {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(0.45em) scale(0.9);
+      filter: blur(10px);
+      transition:
+        opacity 1.5s ease,
+        transform 1.5s ease,
+        filter 1.5s ease;
+    }
+
+    .show .ch {
+      opacity: 1;
+      transform: none;
+      filter: none;
+    }
+
+    .dv {
+      display: block;
+      font-family: var(--hi);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 0.3em;
+      color: var(--cream);
+      letter-spacing: 0.08em;
+    }
+
+    .fade {
+      opacity: 0;
+      transform: translateY(16px);
+      transition:
+        opacity 1.6s ease,
+        transform 1.6s ease;
+      transition-delay: calc(var(--end, 3s) + var(--d, 0s));
+    }
+
+    .show .fade {
+      opacity: 1;
+      transform: none;
+    }
+
+    .date {
+      font-family: var(--cz);
+      font-size: clamp(1.1rem, 4.5vw, 1.6rem);
+      color: var(--gold);
+      letter-spacing: 0.18em;
+    }
+
+    .hint {
+      margin-top: 34px;
+      font-size: 0.85rem;
+      color: var(--gold2);
+    }
+
+    .hint b {
+      display: block;
+      width: 1px;
+      height: 42px;
+      margin: 8px auto 0;
+      background: linear-gradient(var(--gold), transparent);
+      animation: dr 2s ease-in-out infinite;
+    }
+
+    @keyframes dr {
+      50% {
+        transform: translateY(8px);
+        opacity: 0.4;
+      }
+    }
+
+    h2 {
+      font-weight: 400;
+      font-size: clamp(1.7rem, 6vw, 2.5rem);
+      color: var(--gold);
+    }
+
+    .orn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin: 18px auto;
+      color: var(--gold);
+    }
+
+    .orn span {
+      height: 1px;
+      width: 0;
+      background: linear-gradient(90deg, transparent, var(--gold));
+      transition: width 1.8s ease 0.3s;
+    }
+
+    .orn span:last-child {
+      transform: scaleX(-1);
+    }
+
+    .orn.in span,
+    .show .orn span {
+      width: min(28vw, 130px);
+    }
+
+    .bw {
+      width: 34px;
+      height: 34px;
+    }
+
+    .panel {
+      background: #2a0710b8;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid #e3b86673;
+      border-radius: 24px;
+      padding: 30px 24px;
+      box-shadow: 0 10px 50px #0008;
+    }
+
+    .panel p {
+      font-size: clamp(1rem, 3.8vw, 1.15rem);
+      max-width: 34em;
+      margin: 0 auto;
+    }
+
+    .rv {
+      opacity: 0;
+      transform: translateY(36px);
+      transition:
+        opacity 1.3s ease,
+        transform 1.3s ease;
+    }
+
+    .rv.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* timeline */
+    .tl {
+      position: relative;
+      margin-top: 34px;
+      text-align: left;
+      padding-left: 34px;
+    }
+
+    .tl::before {
+      content: "";
+      position: absolute;
+      left: 9px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: linear-gradient(var(--gold), #e3b86622);
+    }
+
+    .ev {
+      position: relative;
+      margin-bottom: 22px;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: #2a0710b8;
+      border: 1px solid #e3b86655;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .ev::before {
+      content: "";
+      position: absolute;
+      left: -33px;
+      top: 50%;
+      width: 14px;
+      height: 14px;
+      margin-top: -7px;
+      border-radius: 50%;
+      background: var(--saffron);
+      box-shadow:
+        0 0 0 4px var(--deep),
+        0 0 14px var(--saffron);
+    }
+
+    .dt {
+      min-width: 84px;
+      text-align: center;
+      color: var(--gold);
+    }
+
+    .dt b {
+      display: block;
+      font-family: var(--sr);
+      font-style: italic;
+      font-size: 2.7rem;
+      line-height: 1;
+    }
+
+    .dt span {
+      font-size: 0.82rem;
+      color: var(--cream);
+    }
+
+    .ev h3 {
+      font-weight: 400;
+      font-size: 1.45rem;
+      color: var(--gold2);
+      line-height: 1.3;
+    }
+
+    .ev em {
+      font-family: var(--sr);
+      font-size: 1.05rem;
+      color: var(--gold);
+    }
+
+    .ev p {
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+
+    .wk {
+      color: var(--saffron);
+    }
+
+    .ev.main {
+      background: linear-gradient(135deg, #7a1a2ce6, #3d0a16e6);
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 40px #e3b86659;
+    }
+
+    .ev.main h3 {
+      font-size: 1.8rem;
+    }
+
+    /* venues + countdown */
+    .grid {
+      display: grid;
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    @media (min-width: 720px) {
       .grid {
-        display: grid;
-        gap: 22px;
-        margin-top: 30px;
+        grid-template-columns: 1fr 1fr;
       }
-      @media (min-width: 720px) {
-        .grid {
-          grid-template-columns: 1fr 1fr;
-        }
+    }
+
+    .grid .panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .grid h3 {
+      font-weight: 400;
+      font-size: 1.5rem;
+      color: var(--gold);
+    }
+
+    .big {
+      font-size: 1.25rem;
+      color: var(--gold2);
+    }
+
+    .map {
+      display: inline-block;
+      margin-top: 6px;
+      font-family: var(--cz);
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      color: var(--gold2);
+      text-decoration: none;
+      border: 1px solid var(--gold);
+      border-radius: 30px;
+      padding: 9px 22px;
+      transition:
+        background 0.4s,
+        color 0.4s;
+    }
+
+    .map:hover,
+    .map:focus-visible {
+      background: var(--gold);
+      color: var(--deep);
+      outline: none;
+    }
+
+    .cd {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 26px;
+      flex-wrap: wrap;
+    }
+
+    .cd div {
+      width: 76px;
+      padding: 14px 4px;
+      border-radius: 50% 50% 16px 16px;
+      border: 1px solid var(--gold);
+      background: #2a0710b8;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .cd b {
+      display: block;
+      font-family: var(--sr);
+      font-size: 2.1rem;
+      line-height: 1;
+      color: var(--gold2);
+    }
+
+    .cd span {
+      font-size: 0.78rem;
+    }
+
+    footer {
+      padding: 70px 20px 90px;
+      text-align: center;
+    }
+
+    footer .jai {
+      font-size: clamp(1.5rem, 6vw, 2.2rem);
+      color: var(--gold);
+    }
+
+    footer .nm {
+      font-family: var(--sr);
+      font-style: italic;
+      font-size: 2rem;
+      color: var(--gold2);
+      margin-top: 20px;
+    }
+
+    footer p {
+      text-shadow: 0 2px 14px #2a0710;
+    }
+
+    .pt {
+      position: fixed;
+      bottom: -20px;
+      left: var(--l);
+      z-index: 3;
+      width: var(--s);
+      height: var(--s);
+      border-radius: 50% 0 50% 50%;
+      background: radial-gradient(#ffd27a, var(--saffron));
+      pointer-events: none;
+      opacity: 0;
+      animation: fl var(--t) linear var(--dl) infinite;
+      will-change: transform, opacity;
+    }
+
+    @keyframes fl {
+      10% {
+        opacity: 0.8;
       }
-      .grid .panel {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-      }
-      .grid h3 {
-        font-weight: 400;
-        font-size: 1.5rem;
-        color: var(--gold);
-      }
-      .big {
-        font-size: 1.25rem;
-        color: var(--gold2);
-      }
-      .map {
-        display: inline-block;
-        margin-top: 6px;
-        font-family: var(--cz);
-        font-size: 0.85rem;
-        letter-spacing: 0.1em;
-        color: var(--gold2);
-        text-decoration: none;
-        border: 1px solid var(--gold);
-        border-radius: 30px;
-        padding: 9px 22px;
-        transition:
-          background 0.4s,
-          color 0.4s;
-      }
-      .map:hover,
-      .map:focus-visible {
-        background: var(--gold);
-        color: var(--deep);
-        outline: none;
-      }
-      .cd {
-        display: flex;
-        justify-content: center;
-        gap: 12px;
-        margin-top: 26px;
-        flex-wrap: wrap;
-      }
-      .cd div {
-        width: 76px;
-        padding: 14px 4px;
-        border-radius: 50% 50% 16px 16px;
-        border: 1px solid var(--gold);
-        background: #2a0710b8;
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-      }
-      .cd b {
-        display: block;
-        font-family: var(--sr);
-        font-size: 2.1rem;
-        line-height: 1;
-        color: var(--gold2);
-      }
-      .cd span {
-        font-size: 0.78rem;
-      }
-      footer {
-        padding: 70px 20px 90px;
-        text-align: center;
-      }
-      footer .jai {
-        font-size: clamp(1.5rem, 6vw, 2.2rem);
-        color: var(--gold);
-      }
-      footer .nm {
-        font-family: var(--sr);
-        font-style: italic;
-        font-size: 2rem;
-        color: var(--gold2);
-        margin-top: 20px;
-      }
-      footer p {
-        text-shadow: 0 2px 14px #2a0710;
-      }
-      .pt {
-        position: fixed;
-        bottom: -20px;
-        left: var(--l);
-        z-index: 3;
-        width: var(--s);
-        height: var(--s);
-        border-radius: 50% 0 50% 50%;
-        background: radial-gradient(#ffd27a, var(--saffron));
-        pointer-events: none;
+
+      100% {
+        transform: translate(var(--x), -112vh) rotate(420deg);
         opacity: 0;
-        animation: fl var(--t) linear var(--dl) infinite;
       }
-      @keyframes fl {
-        10% {
-          opacity: 0.8;
-        }
-        100% {
-          transform: translate(var(--x), -112vh) rotate(420deg);
-          opacity: 0;
-        }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        * {
-          animation: none !important;
-          transition-duration: 0.01s !important;
-          transition-delay: 0s !important;
-        }
-        .pt {
-          display: none;
-        }
-      }
-      /* royal English type */
-      body {
-        font-weight: 500;
-        font-size: 1.1rem;
-      }
-      .t1,
-      .hint,
-      .cd span,
-      .big,
-      .ev h3,
-      .grid h3 {
-        font-family: var(--cz);
-      }
-      .t1 {
-        letter-spacing: 0.14em;
-        font-size: 0.85rem;
-      }
-      .t2 {
-        font-family: var(--nm);
-        font-weight: 700;
-        font-size: clamp(1.15rem, 4.6vw, 1.6rem);
-        letter-spacing: 0.06em;
-      }
-      #btn {
-        font-family: var(--cz);
-        font-weight: 700;
-        font-size: 0.9rem;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-      }
-      .sh {
-        font-family: "Tiro Devanagari Hindi", serif;
-        font-style: normal;
-        font-size: clamp(1.05rem, 3.8vw, 1.35rem);
-        line-height: 1.7;
-      }
-      .names {
-        font-family: var(--nm);
-        font-weight: 700;
-        font-style: normal;
-        font-size: clamp(1.9rem, 8.4vw, 4.6rem);
-        line-height: 1.25;
-        letter-spacing: 0.04em;
-      }
-      .names .wd {
-        font-family: "Great Vibes", cursive;
-        font-weight: 400;
-        font-size: 1.05em;
-        letter-spacing: 0.02em;
-        margin: 0.05em 0;
-        color: var(--cream);
-      }
-      .hint {
-        font-size: 0.72rem;
-        letter-spacing: 0.22em;
-      }
-      h2 {
-        font-family: var(--nm);
-        font-weight: 700;
-        font-size: clamp(1.35rem, 5vw, 2rem);
-        letter-spacing: 0.06em;
-      }
-      .panel p {
-        font-size: clamp(1.12rem, 4vw, 1.3rem);
-      }
-      .dt span {
-        font-size: 0.95rem;
-      }
-      .ev h3,
-      .grid h3 {
-        font-weight: 700;
-        font-size: 1.15rem;
-        letter-spacing: 0.07em;
-      }
-      .ev.main h3 {
-        font-size: 1.35rem;
-      }
-      .ev em {
-        font-size: 1.15rem;
-      }
-      .ev p {
-        font-size: 1.05rem;
-      }
-      .big {
-        font-size: 1.02rem;
-        letter-spacing: 0.05em;
-      }
-      .cd span {
-        font-size: 0.68rem;
-        letter-spacing: 0.12em;
-      }
-      footer .jai {
-        font-family: var(--nm);
-        font-size: clamp(1.15rem, 4.8vw, 1.7rem);
-        letter-spacing: 0.05em;
-      }
-      footer .nm {
-        font-family: "Great Vibes", cursive;
-        font-style: normal;
-        font-size: 3rem;
-      }
-      /* interactive celebrations */
-      .ex {
-        margin-top: 30px;
-      }
-      .rail {
-        position: relative;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        padding-top: 8px;
-      }
-      .rail::before,
-      .rail::after {
-        content: "";
-        position: absolute;
-        left: 10%;
-        top: calc(50% + 4px);
-        height: 2px;
-        background: #e3b86640;
-      }
-      .rail::before {
-        right: 10%;
-      }
-      .rail::after {
-        width: calc(var(--p, 0) * 80%);
-        background: linear-gradient(90deg, var(--gold), var(--saffron));
-        transition: width 0.9s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .chip {
-        position: relative;
-        z-index: 1;
-        justify-self: center;
-        width: min(92%, 84px);
-        padding: 12px 0 10px;
-        border-radius: 999px 999px 14px 14px;
-        border: 1px solid #e3b86666;
-        background: #2a0710;
-        color: var(--gold2);
-        font: inherit;
-        cursor: pointer;
-        transition:
-          transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
-          background 0.6s,
-          color 0.6s,
-          box-shadow 0.6s,
-          border-color 0.6s;
-      }
-      .chip b {
-        display: block;
-        font-family: var(--nm);
-        font-size: clamp(1.05rem, 4.3vw, 1.55rem);
-        line-height: 1.1;
-      }
-      .chip span {
-        font-family: var(--cz);
-        font-size: 0.62rem;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-      }
-      .chip.m::after {
-        content: "";
-        position: absolute;
-        top: -4px;
-        left: 50%;
-        width: 8px;
-        height: 8px;
-        margin-left: -4px;
-        border-radius: 50%;
-        background: var(--saffron);
-        box-shadow: 0 0 10px var(--saffron);
-      }
-      .chip.done {
-        border-color: var(--gold);
-      }
-      .chip:hover:not(.on) {
-        transform: translateY(-3px);
-        border-color: var(--gold);
-      }
-      .chip.on {
-        background: linear-gradient(var(--gold2), var(--gold));
-        color: var(--deep);
-        transform: translateY(-6px) scale(1.08);
-        box-shadow: 0 12px 30px #e3b86659;
-        border-color: var(--gold2);
-      }
-      .chip:focus-visible,
-      .nav:focus-visible {
-        outline: 2px solid var(--cream);
-        outline-offset: 3px;
-      }
-      .card {
-        position: relative;
-        overflow: hidden;
-        margin-top: 28px;
-        min-height: 330px;
-        padding: 34px 22px 30px;
-        border-radius: 26px;
-        border: 1px solid #e3b86666;
-        background: radial-gradient(ellipse at 50% 0, #7a1a2ca6, #2a0710d9 72%);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        transition:
-          border-color 0.8s,
-          box-shadow 0.8s;
-        touch-action: pan-y;
-      }
-      .card.main {
-        border-color: var(--gold);
-        box-shadow:
-          0 0 0 1px var(--gold),
-          0 0 50px #e3b86659;
-      }
-      .card::before {
-        content: attr(data-d);
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: -0.16em;
-        font-family: var(--nm);
-        font-size: clamp(7rem, 32vw, 11rem);
-        line-height: 1;
-        color: #e3b86614;
-        pointer-events: none;
-      }
-      .cc {
-        position: relative;
-      }
-      .cc > * {
-        animation: up 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-      }
-      .cc > :nth-child(2) {
-        animation-delay: 0.08s;
-      }
-      .cc > :nth-child(3) {
-        animation-delay: 0.16s;
-      }
-      .cc > :nth-child(4) {
-        animation-delay: 0.24s;
-      }
-      .cc > :nth-child(5) {
-        animation-delay: 0.32s;
-      }
-      .cc > :nth-child(6) {
-        animation-delay: 0.4s;
-      }
-      @keyframes up {
-        from {
-          opacity: 0;
-          transform: translateY(16px);
-          filter: blur(5px);
-        }
-      }
-      .dl {
-        font-family: var(--cz);
-        font-size: 0.8rem;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: var(--gold);
-      }
-      .card h3 {
-        margin-top: 8px;
-        font-family: var(--nm);
-        font-weight: 700;
-        font-size: clamp(1.5rem, 6vw, 2.2rem);
-        letter-spacing: 0.05em;
-        line-height: 1.25;
-        color: var(--gold2);
-      }
-      .card em {
-        display: block;
-        font-family: var(--sr);
-        font-size: 1.3rem;
-        color: var(--gold);
-      }
-      .pill {
-        display: inline-block;
-        margin: 14px 0 6px;
-        padding: 5px 18px;
-        border: 1px solid var(--gold);
-        border-radius: 30px;
-        font-family: var(--cz);
-        font-size: 0.72rem;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: var(--gold2);
-      }
-      .ds {
-        max-width: 28em;
-        margin: 8px auto 0;
-        font-size: 1.2rem;
-      }
-      .lc {
-        max-width: 28em;
-        margin: 16px auto 0;
-        padding-top: 14px;
-        border-top: 1px solid #e3b86647;
-        font-size: 1.05rem;
-        color: var(--gold2);
-      }
-      .ctl {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        margin-top: 20px;
-      }
-      .ctl span {
-        min-width: 110px;
-        font-family: var(--cz);
-        font-size: 0.75rem;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: var(--gold2);
-      }
-      .nav {
-        width: 44px;
-        height: 44px;
-        display: grid;
-        place-items: center;
-        border-radius: 50%;
-        border: 1px solid var(--gold);
-        background: #2a0710b8;
-        color: var(--gold2);
-        cursor: pointer;
-        transition:
-          background 0.4s,
-          color 0.4s,
-          opacity 0.4s;
-      }
-      .nav svg {
-        width: 20px;
-        height: 20px;
-      }
-      .nav:hover {
-        background: var(--gold);
-        color: var(--deep);
-      }
-      .nav:disabled {
-        opacity: 0.3;
-        pointer-events: none;
-      }
-      .hi {
-        font-family: "Tiro Devanagari Hindi", serif;
-        font-size: clamp(1.1rem, 4vw, 1.3rem);
-      }
-      footer .jai {
-        font-family: "Tiro Devanagari Hindi", serif;
-        font-size: clamp(1.5rem, 6vw, 2.1rem);
-        letter-spacing: 0.02em;
-      }
-      /* full-screen sections + pinned royal reveal */
-      .sec {
-        min-height: 100svh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      .sec > * {
-        width: 100%;
-      }
-      footer {
-        min-height: 100svh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      .pin {
-        position: relative;
-        height: calc(100svh + 5 * 55svh);
-      }
-      .pst {
-        position: sticky;
-        top: 0;
-        height: 100svh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: clamp(10px, 2.4svh, 22px);
-        padding: 12px 16px;
-        text-align: center;
-      }
-      .pst h2 {
-        font-size: clamp(1.15rem, 4.4vw, 1.8rem);
-      }
-      .pst .rail {
-        width: min(94vw, 620px);
-      }
-      .pst .chip {
-        padding: 8px 0 7px;
-      }
-      .pst .chip b {
-        font-size: clamp(1rem, 3.8vw, 1.35rem);
-      }
-      .fr {
-        --r: min(45vw, 260px);
-        position: relative;
-        width: min(90vw, 520px);
-        height: min(64svh, 500px);
-        border-radius: var(--r) var(--r) 22px 22px;
-        overflow: hidden;
-        border: 2px solid var(--gold);
-        box-shadow:
-          0 0 0 4px var(--maroon),
-          0 0 60px #e3b86640;
-        background: #1c040b;
-      }
-      .evs {
-        position: absolute;
-        inset: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: calc(var(--r) * 0.2) 20px 18px;
-        clip-path: circle(0% at 50% 36%);
-        transition: clip-path 1.6s cubic-bezier(0.7, 0, 0.2, 1);
-        background: radial-gradient(
-          ellipse at 50% 0,
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition-duration: 0.01s !important;
+        transition-delay: 0s !important;
+      }
+
+      .pt {
+        display: none;
+      }
+    }
+
+    /* royal English type */
+    body {
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+
+    .t1,
+    .hint,
+    .cd span,
+    .big,
+    .ev h3,
+    .grid h3 {
+      font-family: var(--cz);
+    }
+
+    .t1 {
+      letter-spacing: 0.14em;
+      font-size: 0.85rem;
+    }
+
+    .t2 {
+      font-family: var(--nm);
+      font-weight: 700;
+      font-size: clamp(1.15rem, 4.6vw, 1.6rem);
+      letter-spacing: 0.06em;
+    }
+
+    #btn {
+      font-family: var(--cz);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .sh {
+      font-family: "Tiro Devanagari Hindi", serif;
+      font-style: normal;
+      font-size: clamp(1.05rem, 3.8vw, 1.35rem);
+      line-height: 1.7;
+    }
+
+    .names {
+      font-family: var(--nm);
+      font-weight: 700;
+      font-style: normal;
+      font-size: clamp(1.9rem, 8.4vw, 4.6rem);
+      line-height: 1.25;
+      letter-spacing: 0.04em;
+    }
+
+    .names .wd {
+      font-family: "Great Vibes", cursive;
+      font-weight: 400;
+      font-size: 1.05em;
+      letter-spacing: 0.02em;
+      margin: 0.05em 0;
+      color: var(--cream);
+    }
+
+    .hint {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+    }
+
+    h2 {
+      font-family: var(--nm);
+      font-weight: 700;
+      font-size: clamp(1.35rem, 5vw, 2rem);
+      letter-spacing: 0.06em;
+    }
+
+    .panel p {
+      font-size: clamp(1.12rem, 4vw, 1.3rem);
+    }
+
+    .dt span {
+      font-size: 0.95rem;
+    }
+
+    .ev h3,
+    .grid h3 {
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: 0.07em;
+    }
+
+    .ev.main h3 {
+      font-size: 1.35rem;
+    }
+
+    .ev em {
+      font-size: 1.15rem;
+    }
+
+    .ev p {
+      font-size: 1.05rem;
+    }
+
+    .big {
+      font-size: 1.02rem;
+      letter-spacing: 0.05em;
+    }
+
+    .cd span {
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+    }
+
+    footer .jai {
+      font-family: var(--nm);
+      font-size: clamp(1.15rem, 4.8vw, 1.7rem);
+      letter-spacing: 0.05em;
+    }
+
+    footer .nm {
+      font-family: "Great Vibes", cursive;
+      font-style: normal;
+      font-size: 3rem;
+    }
+
+    /* interactive celebrations */
+    .ex {
+      margin-top: 30px;
+    }
+
+    .rail {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      padding-top: 8px;
+    }
+
+    .rail::before,
+    .rail::after {
+      content: "";
+      position: absolute;
+      left: 10%;
+      top: calc(50% + 4px);
+      height: 2px;
+      background: #e3b86640;
+    }
+
+    .rail::before {
+      right: 10%;
+    }
+
+    .rail::after {
+      width: calc(var(--p, 0) * 80%);
+      background: linear-gradient(90deg, var(--gold), var(--saffron));
+      transition: width 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .chip {
+      position: relative;
+      z-index: 1;
+      justify-self: center;
+      width: min(92%, 84px);
+      padding: 12px 0 10px;
+      border-radius: 999px 999px 14px 14px;
+      border: 1px solid #e3b86666;
+      background: #2a0710;
+      color: var(--gold2);
+      font: inherit;
+      cursor: pointer;
+      transition:
+        transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
+        background 0.6s,
+        color 0.6s,
+        box-shadow 0.6s,
+        border-color 0.6s;
+    }
+
+    .chip b {
+      display: block;
+      font-family: var(--nm);
+      font-size: clamp(1.05rem, 4.3vw, 1.55rem);
+      line-height: 1.1;
+    }
+
+    .chip span {
+      font-family: var(--cz);
+      font-size: 0.62rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .chip.m::after {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      margin-left: -4px;
+      border-radius: 50%;
+      background: var(--saffron);
+      box-shadow: 0 0 10px var(--saffron);
+    }
+
+    .chip.done {
+      border-color: var(--gold);
+    }
+
+    .chip:hover:not(.on) {
+      transform: translateY(-3px);
+      border-color: var(--gold);
+    }
+
+    .chip.on {
+      background: linear-gradient(var(--gold2), var(--gold));
+      color: var(--deep);
+      transform: translateY(-6px) scale(1.08);
+      box-shadow: 0 12px 30px #e3b86659;
+      border-color: var(--gold2);
+    }
+
+    .chip:focus-visible {
+      outline: 2px solid var(--cream);
+      outline-offset: 3px;
+    }
+
+    .pill {
+      display: inline-block;
+      margin: 14px 0 6px;
+      padding: 5px 18px;
+      border: 1px solid var(--gold);
+      border-radius: 30px;
+      font-family: var(--cz);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold2);
+    }
+
+    .ds {
+      max-width: 28em;
+      margin: 8px auto 0;
+      font-size: 1.2rem;
+    }
+
+    .lc {
+      max-width: 28em;
+      margin: 16px auto 0;
+      padding-top: 14px;
+      border-top: 1px solid #e3b86647;
+      font-size: 1.05rem;
+      color: var(--gold2);
+    }
+
+    .hi {
+      font-family: "Tiro Devanagari Hindi", serif;
+      font-size: clamp(1.1rem, 4vw, 1.3rem);
+    }
+
+    footer .jai {
+      font-family: "Tiro Devanagari Hindi", serif;
+      font-size: clamp(1.5rem, 6vw, 2.1rem);
+      letter-spacing: 0.02em;
+    }
+
+    /* full-screen sections + pinned royal reveal */
+    .sec {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sec>* {
+      width: 100%;
+    }
+
+    footer {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .pin {
+      position: relative;
+      height: calc(100svh + 5 * 55svh);
+    }
+
+    .pst {
+      position: sticky;
+      top: 0;
+      height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(10px, 2.4svh, 22px);
+      padding: 12px 16px;
+      text-align: center;
+    }
+
+    .pst h2 {
+      font-size: clamp(1.15rem, 4.4vw, 1.8rem);
+    }
+
+    .pst .rail {
+      width: min(94vw, 620px);
+    }
+
+    .pst .chip {
+      padding: 8px 0 7px;
+    }
+
+    .pst .chip b {
+      font-size: clamp(1rem, 3.8vw, 1.35rem);
+    }
+
+    .fr {
+      --r: min(45vw, 260px);
+      position: relative;
+      width: min(90vw, 520px);
+      height: min(64svh, 500px);
+      border-radius: var(--r) var(--r) 22px 22px;
+      overflow: hidden;
+      border: 2px solid var(--gold);
+      box-shadow:
+        0 0 0 4px var(--maroon),
+        0 0 60px #e3b86640;
+      background: #1c040b;
+      /* GPU accelerated clipping container */
+      transform: translateZ(0);
+      isolation: isolate;
+      contain: paint;
+      touch-action: pan-y;
+    }
+
+    .evs {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: calc(var(--r) * 0.18) 20px 18px;
+      background: radial-gradient(ellipse at 50% 0,
           #8f1d36,
           #3d0a16 62%,
-          #25060e
-        );
-      }
-      .evs.main {
-        background: radial-gradient(
-          ellipse at 50% 0,
+          #25060e);
+      opacity: 0;
+      transform: scale(0.96) translateZ(0);
+      pointer-events: none;
+      transition:
+        opacity 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+        transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+      contain: layout paint style;
+      will-change: opacity, transform;
+    }
+
+    .evs.main {
+      background: radial-gradient(ellipse at 50% 0,
           #c2344f,
           #4a0d1a 60%,
-          #25060e
-        );
-      }
-      .evs.rev {
-        clip-path: circle(150% at 50% 36%);
-      }
-      .evs::before {
-        content: attr(data-d);
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: -0.16em;
-        text-align: center;
-        font-family: var(--nm);
-        font-size: clamp(7rem, 32vw, 11rem);
-        line-height: 1;
-        color: #e3b86614;
-        pointer-events: none;
-      }
-      .ec {
-        position: relative;
-        width: 100%;
-        text-align: center;
-      }
-      .ec > * {
-        opacity: 0;
-        transform: translateY(20px);
-        filter: blur(6px);
-        transition:
-          opacity 1s ease,
-          transform 1s ease,
-          filter 1s ease;
-      }
-      .rev .ec > * {
-        opacity: 1;
-        transform: none;
-        filter: none;
-        transition-delay: calc(0.45s + var(--i, 0) * 0.09s);
-      }
-      .num {
-        display: block;
-        font-family: var(--nm);
-        font-weight: 700;
-        font-size: clamp(3rem, 11svh, 5.4rem);
-        line-height: 1;
-        background: linear-gradient(var(--gold2), var(--gold) 60%, #b07d2c);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-      .mo {
-        font-family: var(--cz);
-        font-size: 0.8rem;
-        letter-spacing: 0.24em;
-        text-transform: uppercase;
-        color: var(--gold);
-      }
-      .ln {
-        display: block;
-        width: 70px;
-        height: 1px;
-        margin: 12px auto;
-        background: linear-gradient(
-          90deg,
+          #25060e);
+    }
+
+    .evs.active {
+      opacity: 1;
+      transform: scale(1) translateZ(0);
+      pointer-events: auto;
+    }
+
+    .ec {
+      position: relative;
+      width: 100%;
+      text-align: center;
+    }
+
+    .ec>* {
+      opacity: 0;
+      transform: translateY(14px);
+      transition:
+        opacity 0.4s ease,
+        transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .evs.active .ec>* {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: calc(0.08s + var(--i, 0) * 0.04s);
+    }
+
+    .num {
+      display: block;
+      font-family: var(--nm);
+      font-weight: 700;
+      font-size: clamp(3rem, 11svh, 5.4rem);
+      line-height: 1;
+      background: linear-gradient(var(--gold2), var(--gold) 60%, #b07d2c);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .mo {
+      font-family: var(--cz);
+      font-size: 0.8rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .ln {
+      display: block;
+      width: 70px;
+      height: 1px;
+      margin: 12px auto;
+      background: linear-gradient(90deg,
           transparent,
           var(--gold),
-          transparent
-        );
-      }
-      .evs h3 {
-        font-family: var(--nm);
-        font-weight: 700;
-        font-size: clamp(1.25rem, 5.2vw, 2rem);
-        letter-spacing: 0.04em;
-        line-height: 1.25;
-        color: var(--gold2);
-      }
+          transparent);
+    }
+
+    .evs h3 {
+      font-family: var(--nm);
+      font-weight: 700;
+      font-size: clamp(1.25rem, 5.2vw, 2rem);
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+      color: var(--gold2);
+    }
+
+    .evs em {
+      display: block;
+      font-family: var(--sr);
+      font-size: 1.25rem;
+      color: var(--gold);
+    }
+
+    .evs .ds {
+      font-size: clamp(1rem, 2.4svh, 1.2rem);
+    }
+
+    .evs .lc {
+      font-size: clamp(0.95rem, 2.2svh, 1.05rem);
+    }
+
+    .sc {
+      font-family: var(--cz);
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold2);
+    }
+
+    @media (max-height: 700px) {
       .evs em {
-        display: block;
-        font-family: var(--sr);
-        font-size: 1.25rem;
-        color: var(--gold);
+        font-size: 1.1rem;
       }
-      .evs .ds {
-        font-size: clamp(1rem, 2.4svh, 1.2rem);
+
+      .pill {
+        margin: 8px 0 2px;
       }
+
       .evs .lc {
-        font-size: clamp(0.95rem, 2.2svh, 1.05rem);
-      }
-      .sc {
-        font-family: var(--cz);
-        font-size: 0.68rem;
-        letter-spacing: 0.22em;
-        text-transform: uppercase;
-        color: var(--gold2);
-      }
-      @media (max-height: 700px) {
-        .evs em {
-          font-size: 1.1rem;
-        }
-        .pill {
-          margin: 8px 0 2px;
-        }
-        .evs .lc {
-          margin-top: 10px;
-          padding-top: 10px;
-        }
-        .ln {
-          margin: 8px auto;
-        }
-      }
-      #snd {
-        position: fixed;
-        right: 16px;
-        top: calc(14px + env(safe-area-inset-top, 0px));
-        z-index: 70;
-        display: none;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        border: 1px solid var(--gold);
-        background: #2a0710b8;
-        color: var(--gold2);
-        font-size: 1.2rem;
-        cursor: pointer;
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-      }
-      body.opened #snd {
-        display: grid;
-        place-items: center;
-      }
-      #snd.off {
-        opacity: 0.55;
-        text-decoration: line-through;
-      }
-      /* ---- Landing page: marigold arch image ---- */
-      #gate {
-        --W: min(100vw, calc(100dvh * 0.5627)); /* width of the arch image */
-        background: #f6ead0;
-        justify-content: center;
-        gap: 3.2dvh;
-        padding-top: calc(9dvh + env(safe-area-inset-top, 0px));
-      }
-      /* soft blurred copy fills any empty sides on wide screens */
-      #gate::before {
-        content: "";
-        position: absolute;
-        inset: -4%;
-        opacity: 1;
-        background: url("images/land2.jpeg") center / cover no-repeat;
-        filter: blur(22px) saturate(1.1);
-      }
-      /* sharp full arch, always fully visible on every screen */
-      #gate::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-        background: url("images/land1.jpeg") center / contain no-repeat;
-      }
-      #gate > * {
-        z-index: 2;
-        max-width: calc(var(--W) * 0.7);
-      }
-      .frame {
-        display: none;
+        margin-top: 10px;
+        padding-top: 10px;
       }
 
-      /* text colours that read well on cream */
-      .t1 {
-        color: #7a1a2c;
-        font-size: clamp(0.7rem, 2.4dvh, 0.9rem);
-        letter-spacing: 0.18em;
+      .ln {
+        margin: 8px auto;
       }
-      .t2 {
-        color: #5a0f22;
-        font-size: clamp(1.2rem, 4.2dvh, 1.9rem);
-        line-height: 1.3;
-      }
-      #btn {
-        background: linear-gradient(#7a1a2c, #4a0d1a);
-        color: var(--gold2);
-        box-shadow: 0 8px 22px #5a0f2255;
-        animation: none;
-      }
-      #gate .t1,
-      #gate .t2 {
-        transition: opacity 0.8s;
-      }
-      #gate.open .t1,
-      #gate.open .t2 {
-        opacity: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
-      <!-- Royal lotus crest: a restrained, symmetrical ornament inspired by
+    }
+
+    #snd {
+      position: fixed;
+      right: 16px;
+      top: calc(14px + env(safe-area-inset-top, 0px));
+      z-index: 70;
+      display: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--gold);
+      background: #2a0710b8;
+      color: var(--gold2);
+      font-size: 1.2rem;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    body.opened #snd {
+      display: grid;
+      place-items: center;
+    }
+
+    #snd.off {
+      opacity: 0.55;
+      text-decoration: line-through;
+    }
+
+    /* ---- Landing page: marigold arch image ---- */
+    #gate {
+      --W: min(100vw, calc(100dvh * 0.5627));
+      /* width of the arch image */
+      background: #f6ead0;
+      justify-content: center;
+      gap: 3.2dvh;
+      padding-top: calc(9dvh + env(safe-area-inset-top, 0px));
+    }
+
+    /* soft blurred copy fills any empty sides on wide screens */
+    #gate::before {
+      content: "";
+      position: absolute;
+      inset: -4%;
+      opacity: 1;
+      background: url("images/land2.jpeg") center / cover no-repeat;
+      filter: blur(22px) saturate(1.1);
+    }
+
+    /* sharp full arch, always fully visible on every screen */
+    #gate::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: url("images/land1.jpeg") center / contain no-repeat;
+    }
+
+    #gate>* {
+      z-index: 2;
+      max-width: calc(var(--W) * 0.7);
+    }
+
+    .frame {
+      display: none;
+    }
+
+    /* text colours that read well on cream */
+    .t1 {
+      color: #7a1a2c;
+      font-size: clamp(0.7rem, 2.4dvh, 0.9rem);
+      letter-spacing: 0.18em;
+    }
+
+    .t2 {
+      color: #5a0f22;
+      font-size: clamp(1.2rem, 4.2dvh, 1.9rem);
+      line-height: 1.3;
+    }
+
+    #btn {
+      background: linear-gradient(#7a1a2c, #4a0d1a);
+      color: var(--gold2);
+      box-shadow: 0 8px 22px #5a0f2255;
+      animation: none;
+    }
+
+    #gate .t1,
+    #gate .t2 {
+      transition: opacity 0.8s;
+    }
+
+    #gate.open .t1,
+    #gate.open .t2 {
+      opacity: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+    <!-- Royal lotus crest: a restrained, symmetrical ornament inspired by
                                                                                                                                                                                                                                                                     traditional Indian palace and jaali detailing. -->
-      <symbol id="bow" viewBox="0 0 48 48">
-        <g
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.65"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <!-- Central flame-shaped lotus petal -->
-          <path
-            d="M24 5.2C19.2 10.1 18.1 15.2 24 21.2C29.9 15.2 28.8 10.1 24 5.2Z"
-          />
-          <!-- Inner central detail -->
-          <path
-            d="M24 10.1C22.2 13.3 22.4 16.1 24 18.1C25.6 16.1 25.8 13.3 24 10.1Z"
-          />
-          <!-- Left and right petals -->
-          <path
-            d="M19.2 20.8C12.2 16.2 8.1 17.2 5.7 21.2C10.1 26.2 14.6 26.1 21 23.2"
-          />
-          <path
-            d="M28.8 20.8C35.8 16.2 39.9 17.2 42.3 21.2C37.9 26.2 33.4 26.1 27 23.2"
-          />
-          <!-- Lower lotus petals -->
-          <path
-            d="M18.8 25.1C12.2 24.3 9.2 27.1 9.4 31.1C14.1 34.1 18.2 31.9 22 26.4"
-          />
-          <path
-            d="M29.2 25.1C35.8 24.3 38.8 27.1 38.6 31.1C33.9 34.1 29.8 31.9 26 26.4"
-          />
-          <path
-            d="M24 24.1C18.2 29.1 18.2 35.1 24 39.1C29.8 35.1 29.8 29.1 24 24.1Z"
-          />
-          <!-- Fine base and jewel -->
-          <path
-            d="M14.5 35.1C17.2 37.2 20.5 38.3 24 38.3C27.5 38.3 30.8 37.2 33.5 35.1"
-          />
-          <path d="M17.4 41.2H30.6M20.2 44H27.8" />
-        </g>
-        <path d="M24 39.7L26.1 41.8L24 43.9L21.9 41.8Z" fill="currentColor" />
-      </symbol>
-    </svg>
+    <symbol id="bow" viewBox="0 0 48 48">
+      <g fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Central flame-shaped lotus petal -->
+        <path d="M24 5.2C19.2 10.1 18.1 15.2 24 21.2C29.9 15.2 28.8 10.1 24 5.2Z" />
+        <!-- Inner central detail -->
+        <path d="M24 10.1C22.2 13.3 22.4 16.1 24 18.1C25.6 16.1 25.8 13.3 24 10.1Z" />
+        <!-- Left and right petals -->
+        <path d="M19.2 20.8C12.2 16.2 8.1 17.2 5.7 21.2C10.1 26.2 14.6 26.1 21 23.2" />
+        <path d="M28.8 20.8C35.8 16.2 39.9 17.2 42.3 21.2C37.9 26.2 33.4 26.1 27 23.2" />
+        <!-- Lower lotus petals -->
+        <path d="M18.8 25.1C12.2 24.3 9.2 27.1 9.4 31.1C14.1 34.1 18.2 31.9 22 26.4" />
+        <path d="M29.2 25.1C35.8 24.3 38.8 27.1 38.6 31.1C33.9 34.1 29.8 31.9 26 26.4" />
+        <path d="M24 24.1C18.2 29.1 18.2 35.1 24 39.1C29.8 35.1 29.8 29.1 24 24.1Z" />
+        <!-- Fine base and jewel -->
+        <path d="M14.5 35.1C17.2 37.2 20.5 38.3 24 38.3C27.5 38.3 30.8 37.2 33.5 35.1" />
+        <path d="M17.4 41.2H30.6M20.2 44H27.8" />
+      </g>
+      <path d="M24 39.7L26.1 41.8L24 43.9L21.9 41.8Z" fill="currentColor" />
+    </symbol>
+  </svg>
 
-    <div class="bg b1"></div>
-    <div class="bg b2"></div>
-    <div class="bg b3"></div>
-    <div id="shade"></div>
-    <audio id="bgm" src="music/music2.mp3" loop preload="auto"></audio>
-    <button id="snd" type="button" aria-label="Toggle music">♪</button>
+  <div class="bg b1"></div>
+  <div class="bg b2"></div>
+  <div class="bg b3"></div>
+  <div id="shade"></div>
+  <audio id="bgm" src="music/music2.mp3" loop preload="auto"></audio>
+  <button id="snd" type="button" aria-label="Toggle music">♪</button>
 
-    <!-- Landing: palace door -->
-    <div id="gate">
-      <p class="t1">॥ श्री गणेशाय नमः ॥</p>
-      <div class="frame">
-        <div class="glow"></div>
-        <div class="door dl"><i></i></div>
-        <div class="door dr"><i></i></div>
-        <div class="medal">
-          <svg style="color: #5a0f22"><use href="#bow" /></svg>
+  <!-- Landing: palace door -->
+  <div id="gate">
+    <p class="t1">॥ श्री गणेशाय नमः ॥</p>
+    <div class="frame">
+      <div class="glow"></div>
+      <div class="door dl"><i></i></div>
+      <div class="door dr"><i></i></div>
+      <div class="medal">
+        <svg style="color: #5a0f22">
+          <use href="#bow" />
+        </svg>
+      </div>
+    </div>
+    <h1 class="t2">Welcome</h1>
+    <button id="btn" type="button">Open Invitation</button>
+  </div>
+
+  <main>
+    <section id="hero">
+      <p class="sh fade" style="--d: -1.6s">
+        मंगलम् भगवान विष्णुः, मंगलम् गरुडध्वजः।<br />मंगलम् पुण्डरीकाक्षः,
+        मंगलाय तनो हरिः॥
+      </p>
+      <h1 class="names" aria-label="Ankit Singh Weds Dhriti Patel">
+        <span data-t="Ankit Singh"></span><span class="wd" data-t="Weds"></span><span data-t="Dhriti Patel"></span>
+      </h1>
+      <div class="orn">
+        <span></span><svg class="bw">
+          <use href="#bow" />
+        </svg><span></span>
+      </div>
+      <p class="date fade" style="--d: 0.6s">1 December 2026</p>
+      <p class="fade" style="--d: 0.9s">
+        The Wedding · Tuesday Night · Varanasi
+      </p>
+      <p class="hint fade" style="--d: 1.6s">Scroll<b></b></p>
+    </section>
+
+    <section class="sec rv">
+      <div class="panel">
+        <h2>With Joy, We Invite You</h2>
+        <div class="orn">
+          <span></span><svg class="bw">
+            <use href="#bow" />
+          </svg><span></span>
+        </div>
+        <p>
+          Just as every sacred bond rests on dignity, love and trust, it is in
+          that same auspicious spirit that our family celebrates this wedding.
+        </p>
+        <br />
+        <p>
+          Please join us with your family, and bless the bride and groom with
+          your love and presence.
+        </p>
+      </div>
+    </section>
+
+    <section class="pin" id="pin">
+      <div class="pst">
+        <h2>Wedding Celebrations</h2>
+        <div class="rail" id="rail" role="tablist" aria-label="Wedding celebrations"></div>
+        <div class="fr" id="fr"></div>
+        <p class="sc">Scroll to unveil</p>
+      </div>
+    </section>
+
+    <section class="sec">
+      <h2 class="rv">Venues &amp; Departure</h2>
+      <div class="grid">
+        <div class="panel rv">
+          <h3>Baraat Departure</h3>
+          <p>
+            The baraat will depart from our residence at
+            <span class="big">5:00 PM</span> for
+          </p>
+          <p class="big">The Royal Green Garden</p>
+          <p>Parmanandpur, Shivpur, Varanasi</p>
+          <a class="map" target="_blank" rel="noopener"
+            href="https://www.google.com/maps/search/?api=1&query=The+Royal+Green+Garden+Parmanandpur+Shivpur+Varanasi">Open
+            in Maps</a>
+        </div>
+        <div class="panel rv">
+          <h3>Reception Venue</h3>
+          <p>The entire Reception will be held at our residence.</p>
+          <p class="big">Village Chithariyapur</p>
+          <p>Post Shivpur, Varanasi</p>
+          <a class="map" target="_blank" rel="noopener"
+            href="https://www.google.com/maps/search/?api=1&query=Chithriyapur+Shivpur+Varanasi">Open in Maps</a>
         </div>
       </div>
-      <h1 class="t2">Welcome</h1>
-      <button id="btn" type="button">Open Invitation</button>
-    </div>
+    </section>
 
-    <main>
-      <section id="hero">
-        <p class="sh fade" style="--d: -1.6s">
-          मंगलम् भगवान विष्णुः, मंगलम् गरुडध्वजः।<br />मंगलम् पुण्डरीकाक्षः,
-          मंगलाय तनो हरिः॥
-        </p>
-        <h1 class="names" aria-label="Ankit Singh Weds Dhriti Patel">
-          <span data-t="Ankit Singh"></span
-          ><span class="wd" data-t="Weds"></span
-          ><span data-t="Dhriti Patel"></span>
-        </h1>
-        <div class="orn">
-          <span></span><svg class="bw"><use href="#bow" /></svg><span></span>
-        </div>
-        <p class="date fade" style="--d: 0.6s">1 December 2026</p>
-        <p class="fade" style="--d: 0.9s">
-          The Wedding · Tuesday Night · Varanasi
-        </p>
-        <p class="hint fade" style="--d: 1.6s">Scroll<b></b></p>
-      </section>
+    <section class="sec">
+      <h2 class="rv">Until the Auspicious Hour</h2>
+      <p class="rv" style="margin-top: 6px">
+        Baraat departure · 1 December 2026, 5:00 PM
+      </p>
+      <div class="cd rv">
+        <div><b id="d">0</b><span>Days</span></div>
+        <div><b id="h">0</b><span>Hours</span></div>
+        <div><b id="m">0</b><span>Minutes</span></div>
+        <div><b id="s">0</b><span>Seconds</span></div>
+      </div>
+    </section>
 
-      <section class="sec rv">
-        <div class="panel">
-          <h2>With Joy, We Invite You</h2>
-          <div class="orn">
-            <span></span><svg class="bw"><use href="#bow" /></svg><span></span>
-          </div>
-          <p>
-            Just as every sacred bond rests on dignity, love and trust, it is in
-            that same auspicious spirit that our family celebrates this wedding.
-          </p>
-          <br />
-          <p>
-            Please join us with your family, and bless the bride and groom with
-            your love and presence.
-          </p>
-        </div>
-      </section>
+    <footer>
+      <div class="orn rv">
+        <span></span><svg class="bw">
+          <use href="#bow" />
+        </svg><span></span>
+      </div>
+      <p class="hi rv">मंगल भवन अमंगल हारी, द्रवहु सो दशरथ अजिर बिहारी॥</p>
+      <p class="jai rv" style="margin-top: 14px">सियावर रामचन्द्र की जय</p>
+      <p class="nm rv">Ankit &amp; Dhriti</p>
+      <p class="rv" style="font-size: 1.05rem; margin-top: 8px">
+        Awaiting your blessings and presence, with love, from our entire
+        family
+      </p>
+    </footer>
+  </main>
 
-      <section class="pin" id="pin">
-        <div class="pst">
-          <h2>Wedding Celebrations</h2>
-          <div
-            class="rail"
-            id="rail"
-            role="tablist"
-            aria-label="Wedding celebrations"
-          ></div>
-          <div class="fr" id="fr"></div>
-          <p class="sc">Scroll to unveil</p>
-        </div>
-      </section>
-
-      <section class="sec">
-        <h2 class="rv">Venues &amp; Departure</h2>
-        <div class="grid">
-          <div class="panel rv">
-            <h3>Baraat Departure</h3>
-            <p>
-              The baraat will depart from our residence at
-              <span class="big">5:00 PM</span> for
-            </p>
-            <p class="big">The Royal Green Garden</p>
-            <p>Parmanandpur, Shivpur, Varanasi</p>
-            <a
-              class="map"
-              target="_blank"
-              rel="noopener"
-              href="https://www.google.com/maps/search/?api=1&query=The+Royal+Green+Garden+Parmanandpur+Shivpur+Varanasi"
-              >Open in Maps</a
-            >
-          </div>
-          <div class="panel rv">
-            <h3>Reception Venue</h3>
-            <p>The entire Reception will be held at our residence.</p>
-            <p class="big">Village Chithariyapur</p>
-            <p>Post Shivpur, Varanasi</p>
-            <a
-              class="map"
-              target="_blank"
-              rel="noopener"
-              href="https://www.google.com/maps/search/?api=1&query=Chithriyapur+Shivpur+Varanasi"
-              >Open in Maps</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <section class="sec">
-        <h2 class="rv">Until the Auspicious Hour</h2>
-        <p class="rv" style="margin-top: 6px">
-          Baraat departure · 1 December 2026, 5:00 PM
-        </p>
-        <div class="cd rv">
-          <div><b id="d">0</b><span>Days</span></div>
-          <div><b id="h">0</b><span>Hours</span></div>
-          <div><b id="m">0</b><span>Minutes</span></div>
-          <div><b id="s">0</b><span>Seconds</span></div>
-        </div>
-      </section>
-
-      <footer>
-        <div class="orn rv">
-          <span></span><svg class="bw"><use href="#bow" /></svg><span></span>
-        </div>
-        <p class="hi rv">मंगल भवन अमंगल हारी, द्रवहु सो दशरथ अजिर बिहारी॥</p>
-        <p class="jai rv" style="margin-top: 14px">सियावर रामचन्द्र की जय</p>
-        <p class="nm rv">Ankit &amp; Dhriti</p>
-        <p class="rv" style="font-size: 1.05rem; margin-top: 8px">
-          Awaiting your blessings and presence, with love, from our entire
-          family
-        </p>
-      </footer>
-    </main>
-
-    <script>
-      const $ = (s) => document.querySelector(s),
-        gate = $("#gate"),
-        hero = $("#hero");
-      let i = 0;
-      document.querySelectorAll("[data-t]").forEach((el) => {
-        el.dataset.t.split(" ").forEach((w, k, a) => {
-          const s = document.createElement("span");
-          s.className = "w";
-          [...w].forEach((c) => {
-            const x = document.createElement("span");
-            x.className = "ch";
-            x.textContent = c;
-            x.style.transitionDelay = i++ * 0.13 + "s";
-            s.append(x);
-          });
-          el.append(s);
-          if (k < a.length - 1) el.append(" ");
+  <script>
+    const $ = (s) => document.querySelector(s),
+      gate = $("#gate"),
+      hero = $("#hero");
+    let i = 0;
+    document.querySelectorAll("[data-t]").forEach((el) => {
+      el.dataset.t.split(" ").forEach((w, k, a) => {
+        const s = document.createElement("span");
+        s.className = "w";
+        [...w].forEach((c) => {
+          const x = document.createElement("span");
+          x.className = "ch";
+          x.textContent = c;
+          x.style.transitionDelay = i++ * 0.13 + "s";
+          s.append(x);
         });
+        el.append(s);
+        if (k < a.length - 1) el.append(" ");
       });
-      hero.style.setProperty("--end", i * 0.13 + 0.9 + "s");
+    });
+    hero.style.setProperty("--end", i * 0.13 + 0.9 + "s");
 
-      const E = [
-        {
-          t: "Haldi",
-          s: "Shubh Haldi",
-          d: "29",
-          m: "Nov",
-          w: "Sunday",
-          f: "29 November 2026",
-          p: "The sacred turmeric ritual, with laughter, colour and blessings.",
-        },
-        {
-          t: "Mehndi &amp; Sangeet",
-          s: "An evening of henna and song",
-          d: "30",
-          m: "Nov",
-          w: "Monday",
-          f: "30 November 2026",
-          p: "Hands adorned with henna, a night alive with music.",
-        },
-        {
-          t: "The Wedding",
-          s: "Shubh Vivah",
-          d: "01",
-          m: "Dec",
-          w: "Tuesday · Night",
-          f: "1 December 2026",
-          p: "Seven steps, seven vows, one sacred beginning.",
-          l: "Baraat departs at 5:00 PM for The Royal Green Garden",
-          x: 1,
-        },
-        {
-          t: "Vidai",
-          s: "The bride’s farewell",
-          d: "02",
-          m: "Dec",
-          w: "Wednesday · Morning",
-          f: "2 December 2026",
-          p: "Moist eyes, hearts full of blessings.",
-        },
-        {
-          t: "Reception",
-          s: "Celebrating the newlyweds",
-          d: "03",
-          m: "Dec",
-          w: "Thursday",
-          f: "3 December 2026",
-          p: "A warm gathering with family and loved ones to bless the couple.",
-          l: "At our residence · Chithriyapur, Shivpur, Varanasi",
-        },
-      ];
-      let cur = -1;
-      const rail = $("#rail"),
-        fr = $("#fr"),
-        pin = $("#pin");
-      rail.innerHTML = E.map(
-        (e, k) =>
-          `<button class="chip${e.x ? " m" : ""}" role="tab" data-k="${k}"><b>${e.d}</b><span>${e.m}</span></button>`,
-      ).join("");
-      fr.innerHTML = E.map(
-        (e) =>
-          `<article class="evs${e.x ? " main" : ""}" data-d="${e.d}"><div class="ec"><b class="num">${e.d}</b><p class="mo">${e.f.split(" ").slice(1).join(" ")}</p><i class="ln"></i><h3>${e.t}</h3><em>${e.s}</em><span class="pill">${e.w}</span><p class="ds">${e.p}</p>${e.l ? `<p class="lc">${e.l}</p>` : ""}</div></article>`,
-      ).join("");
-      fr.querySelectorAll(".ec").forEach((c) =>
-        [...c.children].forEach((n, i) => n.style.setProperty("--i", i)),
-      );
-      function setEv(k) {
-        cur = k;
-        [...fr.children].forEach((a, j) => a.classList.toggle("rev", j <= k));
-        [...rail.children].forEach((c, j) => {
-          c.classList.toggle("on", j === k);
-          c.classList.toggle("done", j < k);
-          c.setAttribute("aria-selected", j === k);
-        });
-        rail.style.setProperty("--p", Math.max(0, k) / (E.length - 1));
-      }
-      function pinTick() {
-        const r = pin.getBoundingClientRect(),
-          v = innerHeight,
-          k = Math.max(
-            -1,
-            Math.min(
-              E.length - 1,
-              Math.floor((-r.top + 0.25 * v) / (0.55 * v)),
-            ),
-          );
-        if (k !== cur) setEv(k);
-      }
-      rail.onclick = (ev) => {
-        const b = ev.target.closest(".chip");
-        if (b)
-          scrollTo({
-            top:
-              scrollY +
-              pin.getBoundingClientRect().top +
-              +b.dataset.k * 0.55 * innerHeight +
-              2,
-            behavior: "smooth",
-          });
-      };
-      let pt = 0;
-      const pk = () => {
-        pt ||
-          (pt = requestAnimationFrame(() => {
-            pt = 0;
-            pinTick();
-          }));
-      };
-      addEventListener("scroll", pk, { passive: true });
-      addEventListener("resize", pk);
-      pinTick();
+    const E = [
+      {
+        t: "Haldi",
+        s: "Shubh Haldi",
+        d: "29",
+        m: "Nov",
+        w: "Sunday",
+        f: "29 November 2026",
+        p: "The sacred turmeric ritual, with laughter, colour and blessings.",
+      },
+      {
+        t: "Mehndi &amp; Sangeet",
+        s: "An evening of henna and song",
+        d: "30",
+        m: "Nov",
+        w: "Monday",
+        f: "30 November 2026",
+        p: "Hands adorned with henna, a night alive with music.",
+      },
+      {
+        t: "The Wedding",
+        s: "Shubh Vivah",
+        d: "01",
+        m: "Dec",
+        w: "Tuesday · Night",
+        f: "1 December 2026",
+        p: "Seven steps, seven vows, one sacred beginning.",
+        l: "Baraat departs at 5:00 PM for The Royal Green Garden",
+        x: 1,
+      },
+      {
+        t: "Vidai",
+        s: "The bride’s farewell",
+        d: "02",
+        m: "Dec",
+        w: "Wednesday · Morning",
+        f: "2 December 2026",
+        p: "Moist eyes, hearts full of blessings.",
+      },
+      {
+        t: "Reception",
+        s: "Celebrating the newlyweds",
+        d: "03",
+        m: "Dec",
+        w: "Thursday",
+        f: "3 December 2026",
+        p: "A warm gathering with family and loved ones to bless the couple.",
+        l: "At our residence · Chithriyapur, Shivpur, Varanasi",
+      },
+    ];
+    let cur = -1;
+    const rail = $("#rail"),
+      fr = $("#fr"),
+      pin = $("#pin"),
+      pst = pin.querySelector(".pst");
 
-      const io = new IntersectionObserver(
-        (es) =>
-          es.forEach((e) => {
-            if (e.isIntersecting) {
-              e.target.classList.add("in");
-              io.unobserve(e.target);
+    rail.innerHTML = E.map(
+      (e, k) =>
+        `<button class="chip${e.x ? " m" : ""}" role="tab" data-k="${k}" aria-label="${e.t} (${e.d} ${e.m})"><b>${e.d}</b><span>${e.m}</span></button>`,
+    ).join("");
+
+    fr.innerHTML = E.map(
+      (e) =>
+        `<article class="evs${e.x ? " main" : ""}" data-d="${e.d}"><div class="ec"><b class="num">${e.d}</b><p class="mo">${e.f.split(" ").slice(1).join(" ")}</p><i class="ln"></i><h3>${e.t}</h3><em>${e.s}</em><span class="pill">${e.w}</span><p class="ds">${e.p}</p>${e.l ? `<p class="lc">${e.l}</p>` : ""}</div></article>`,
+    ).join("");
+
+    const evsArticles = [...fr.querySelectorAll(".evs")];
+    const railChips = [...rail.querySelectorAll(".chip")];
+
+    fr.querySelectorAll(".ec").forEach((c) =>
+      [...c.children].forEach((n, i) => n.style.setProperty("--i", i)),
+    );
+
+    function setEv(k) {
+      if (k === cur) return;
+      cur = k;
+      evsArticles.forEach((a, j) => {
+        const isActive = j === k;
+        a.classList.toggle("active", isActive);
+        a.style.zIndex = isActive ? "3" : j < k ? "1" : "2";
+      });
+      railChips.forEach((c, j) => {
+        c.classList.toggle("on", j === k);
+        c.classList.toggle("done", j < k);
+        c.setAttribute("aria-selected", j === k ? "true" : "false");
+      });
+      rail.style.setProperty("--p", Math.max(0, k) / (E.length - 1));
+    }
+
+    // Cached measurements to prevent synchronous layout thrashing during scroll
+    let cachedViewH = pst.offsetHeight || window.innerHeight;
+    let cachedPinH = pin.offsetHeight;
+    let cachedScrollSpace = Math.max(1, cachedPinH - cachedViewH);
+
+    function updateMetrics() {
+      cachedViewH = pst.offsetHeight || window.innerHeight;
+      cachedPinH = pin.offsetHeight;
+      cachedScrollSpace = Math.max(1, cachedPinH - cachedViewH);
+    }
+
+    let isAutoScrolling = false;
+    let autoScrollTimeout = 0;
+
+    function pinTick() {
+      if (isAutoScrolling) return;
+      const r = pin.getBoundingClientRect();
+      const scrolled = -r.top;
+
+      // Rock-solid progress calculation:
+      // Before sticking, stay calm on event 0 (Haldi) with zero flip-flopping
+      let k = 0;
+      if (scrolled > 0) {
+        const progress = Math.min(1, scrolled / cachedScrollSpace);
+        k = Math.min(E.length - 1, Math.floor(progress * E.length));
+      }
+
+      if (k !== cur) setEv(k);
+    }
+
+    function scrollToEvent(targetK) {
+      updateMetrics();
+      setEv(targetK);
+      isAutoScrolling = true;
+      clearTimeout(autoScrollTimeout);
+      autoScrollTimeout = setTimeout(() => {
+        isAutoScrolling = false;
+      }, 800);
+
+      const pinTop = window.scrollY + pin.getBoundingClientRect().top;
+      // Smoothly position at the exact midpoint of target event's section
+      const targetOffset = ((targetK + 0.5) / E.length) * cachedScrollSpace;
+      window.scrollTo({
+        top: pinTop + targetOffset,
+        behavior: "smooth",
+      });
+    }
+
+    rail.addEventListener("click", (ev) => {
+      const b = ev.target.closest(".chip");
+      if (!b) return;
+      const targetK = +b.dataset.k;
+      scrollToEvent(targetK);
+    });
+
+    // Mobile touch swipe gesture on cards
+    let touchStartX = 0;
+    let touchStartY = 0;
+    fr.addEventListener(
+      "touchstart",
+      (e) => {
+        if (e.touches.length === 1) {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+        }
+      },
+      { passive: true },
+    );
+    fr.addEventListener(
+      "touchend",
+      (e) => {
+        if (e.changedTouches.length === 1) {
+          const dx = e.changedTouches[0].clientX - touchStartX;
+          const dy = e.changedTouches[0].clientY - touchStartY;
+          if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+            if (dx < 0 && cur < E.length - 1) {
+              scrollToEvent(cur + 1);
+            } else if (dx > 0 && cur > 0) {
+              scrollToEvent(cur - 1);
             }
-          }),
-        { threshold: 0.15 },
-      );
-      document.querySelectorAll(".rv").forEach((el) => io.observe(el));
-
-      function petals() {
-        for (let k = 0; k < 18; k++) {
-          const p = document.createElement("span");
-          p.className = "pt";
-          p.style.cssText = `--l:${Math.random() * 100}vw;--s:${6 + Math.random() * 9}px;--t:${12 + Math.random() * 10}s;--dl:${Math.random() * 10}s;--x:${(Math.random() - 0.5) * 160}px`;
-          document.body.append(p);
+          }
         }
-      }
+      },
+      { passive: true },
+    );
 
-      const bgm = $("#bgm"),
-        snd = $("#snd");
-      function musicOn() {
-        bgm.volume = 0;
-        bgm
-          .play()
-          .then(() => {
-            let v = 0;
-            const f = setInterval(() => {
-              v = Math.min(0.7, v + 0.03);
-              bgm.volume = v;
-              if (v >= 0.7) clearInterval(f);
-            }, 120);
-          })
-          .catch(() => {});
-        snd.classList.remove("off");
-      }
-      snd.onclick = () => {
-        if (bgm.paused) musicOn();
-        else {
-          bgm.pause();
-          snd.classList.add("off");
-        }
-      };
-
-      $("#btn").onclick = () => {
-        if (gate.classList.contains("open")) return;
-        gate.classList.add("open");
-        musicOn();
-        setTimeout(() => gate.classList.add("go"), 2000);
-        setTimeout(() => {
-          document.body.classList.add("opened");
-          hero.classList.add("show");
-          petals();
-          setBg(0);
-        }, 2900);
-        setTimeout(() => gate.remove(), 5300);
-      };
-
-      const B = [...document.querySelectorAll(".bg")];
-      function setBg(n) {
-        B.forEach((b, k) => b.classList.toggle("on", k === n));
-      }
-      const S = [...document.querySelectorAll("main>section,main>footer")],
-        map = [0, 0, 1, 1, 2, 2];
-      const bo = new IntersectionObserver(
-        (es) =>
-          es.forEach((e) => {
-            if (e.isIntersecting && document.body.classList.contains("opened"))
-              setBg(map[S.indexOf(e.target)]);
-          }),
-        { rootMargin: "-50% 0px -50% 0px" },
-      );
-      S.forEach((s) => bo.observe(s));
-
-      const T = new Date("2026-12-01T17:00:00+05:30");
-      function cd() {
-        let t = Math.max(0, T - Date.now()) / 1000;
-        [
-          ["d", 86400],
-          ["h", 3600],
-          ["m", 60],
-          ["s", 1],
-        ].forEach(([id, u]) => {
-          $("#" + id).textContent = Math.floor(t / u);
-          t %= u;
+    let pt = 0;
+    const pk = () => {
+      if (!pt) {
+        pt = requestAnimationFrame(() => {
+          pt = 0;
+          pinTick();
         });
       }
-      cd();
-      setInterval(cd, 1000);
-    </script>
-  </body>
+    };
+    window.addEventListener("scroll", pk, { passive: true });
+    window.addEventListener("resize", () => {
+      updateMetrics();
+      pk();
+    });
+
+    updateMetrics();
+    setEv(0);
+    pinTick();
+
+    const io = new IntersectionObserver(
+      (es) =>
+        es.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("in");
+            io.unobserve(e.target);
+          }
+        }),
+      { threshold: 0.15 },
+    );
+    document.querySelectorAll(".rv").forEach((el) => io.observe(el));
+
+    function petals() {
+      for (let k = 0; k < 18; k++) {
+        const p = document.createElement("span");
+        p.className = "pt";
+        p.style.cssText = `--l:${Math.random() * 100}vw;--s:${6 + Math.random() * 9}px;--t:${12 + Math.random() * 10}s;--dl:${Math.random() * 10}s;--x:${(Math.random() - 0.5) * 160}px`;
+        document.body.append(p);
+      }
+    }
+
+    const bgm = $("#bgm"),
+      snd = $("#snd");
+    function musicOn() {
+      bgm.volume = 0;
+      bgm
+        .play()
+        .then(() => {
+          let v = 0;
+          const f = setInterval(() => {
+            v = Math.min(0.7, v + 0.03);
+            bgm.volume = v;
+            if (v >= 0.7) clearInterval(f);
+          }, 120);
+        })
+        .catch(() => { });
+      snd.classList.remove("off");
+    }
+    snd.onclick = () => {
+      if (bgm.paused) musicOn();
+      else {
+        bgm.pause();
+        snd.classList.add("off");
+      }
+    };
+
+    $("#btn").onclick = () => {
+      if (gate.classList.contains("open")) return;
+      gate.classList.add("open");
+      musicOn();
+      setTimeout(() => gate.classList.add("go"), 2000);
+      setTimeout(() => {
+        document.body.classList.add("opened");
+        hero.classList.add("show");
+        petals();
+        setBg(0);
+      }, 2900);
+      setTimeout(() => gate.remove(), 5300);
+    };
+
+    const B = [...document.querySelectorAll(".bg")];
+    function setBg(n) {
+      B.forEach((b, k) => b.classList.toggle("on", k === n));
+    }
+    const S = [...document.querySelectorAll("main>section,main>footer")],
+      map = [0, 0, 1, 1, 2, 2];
+    const bo = new IntersectionObserver(
+      (es) =>
+        es.forEach((e) => {
+          if (e.isIntersecting && document.body.classList.contains("opened"))
+            setBg(map[S.indexOf(e.target)]);
+        }),
+      { rootMargin: "-50% 0px -50% 0px" },
+    );
+    S.forEach((s) => bo.observe(s));
+
+    const T = new Date("2026-12-01T17:00:00+05:30");
+    const cdD = $("#d"), cdH = $("#h"), cdM = $("#m"), cdS = $("#s");
+    const cdUnits = [
+      [cdD, 86400],
+      [cdH, 3600],
+      [cdM, 60],
+      [cdS, 1],
+    ];
+    function cd() {
+      let t = Math.max(0, T - Date.now()) / 1000;
+      cdUnits.forEach(([el, u]) => {
+        if (el) {
+          el.textContent = Math.floor(t / u);
+          t %= u;
+        }
+      });
+    }
+    cd();
+    setInterval(cd, 1000);
+  </script>
+</body>
+
 </html>
